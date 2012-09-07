@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+@import "setting";
+@import "core/reset";
+@import "core/function";
+@import "core/utility";
+@import "common";
+
+html {
+	background: bg("aaa.gif");
+}
+#gnav {
+	a {
+		@extend %sprite;
+		width: 100px;
+		height: 100px;
+	}
+	.class {
+		a {
+			@include sprite(null, null, 10px, 10px);
+		}
+	}
+	.id {
+		a {
+			@include sprite(null, null, 20px, 20px);
+		}
+	}
+}

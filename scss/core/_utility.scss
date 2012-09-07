@@ -1,0 +1,41 @@
+@charset "UTF-8";
+// Mixin、placeholderなどの便利な再利用可能コード片を記述するファイル
+
+// %clearfix
+// %sprite
+// @sprite
+// @border-radius
+
+// clearfix用コード
+%clearfix {
+	@if $support-ie6 or $support-ie7 {
+		*zoom: 1;
+	}
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+		height: 0;
+	}
+}
+
+// CSS sprite用のコード
+%sprite {
+	 display: block;
+	 white-space: nowrap;
+	 text-indent: 100%;
+	 overflow :hidden;
+}
+@mixin sprite($width, $height, $left, $top, $img: 'sprite.png') {
+	width: $width;
+	height: $height;
+	background: url($img) no-repeat $left $top;
+	//@extend %sprite;
+}
+
+// border-radius
+@mixin border_radius($value) {
+	@each $prefix in $set_prefix {
+		#{$prefix}border-radius: $value;
+	}
+}

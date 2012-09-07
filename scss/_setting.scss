@@ -1,0 +1,22 @@
+@charset "UTF-8";
+// 案件の基本設計の設定を行うファイル
+
+// 対応ブラウザ
+$support-ie6: false;
+$support-ie7: false;
+$support-ie8: false;
+$support-ie9: true;
+$support-mozilla: true;
+$support-webkit : true;
+$support-opera  : false;
+
+// HTML5、Normalize.cssを使うか否か。normalizeがtrueならリセットCSSでNormalize.cssが使われ、falseならReset.cssが使われる
+// その際、HTML5が使われている場合、HTML5用のReset.cssが使われる。
+$use-html5: true;
+$use-normalize: true;
+
+// フォントサイズ
+$fontSizeList: 62%, 70%, 77%, 85%, 93%, 100%, 108%, 116%, 124%, 131%, 139%, 147%, 154%, 162%, 170%, 177%, 185%, 193%, 200%, 208%, 216%, 224%, 231%, 239%, 247%, 254%, 262%, 270%, 277%, 285%, 293%, 300%, 308%;
+
+// ベンダープレフィックス用
+$set_prefix: -webkit-, -moz-, -ms-, -o-, '';

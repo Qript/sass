@@ -1,0 +1,19 @@
+@charset "UTF-8";
+// ユーザー定義の関数を定義するファイル
+
+// フォントサイズ
+@function fz($size) {
+    @if $size < 8 {
+        $size: 8;
+    }
+    @if $size > 40 {
+        $size: 40;
+    }
+    @return nth($fontSizeList, $size - 7);
+}
+
+// 背景画像用
+$path:'/common/img/';
+@function bg($img, $after: 0 0 no-repeat, $before: transparent) {
+	@return $before url(#{$path}#{$img}) $after;
+}
